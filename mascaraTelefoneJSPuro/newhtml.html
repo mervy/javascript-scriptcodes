@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+           *{ font-family: 'Ubuntu', sans-serif;}
+        </style>
+        <title>Máscara para campo telefone</title>
+        <script>
+            function maskPhone(){                
+                var inputPhone = document.getElementById("phone");
+                var phone = inputPhone.value;
+                
+                if(phone.length == 1){
+                    phone = "(" + phone;
+                    inputPhone.value = phone;
+                    return true;
+                }
+                if(phone.length == 3){
+                    phone = phone + ") ";
+                    inputPhone.value = phone;
+                    return true;
+                }
+                if(phone.length == 10){
+                    phone = phone + "-";
+                    inputPhone.value = phone;
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-5">Máscara para campo telefone</h1>
+            
+            <div class="row justify-content-md-center">
+                <div class="col-md-6">
+                    <hr>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone" onkeyup="maskPhone()" maxlength="15">
+                        </div>                
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+       
+    </body>
+</html>
