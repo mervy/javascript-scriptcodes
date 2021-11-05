@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Images before upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: brown;
+        }
+
+        main {
+            margin: 0 auto;
+            width: 90%;
+            background-color: brown;
+        }
+
+        .container {
+            display: grid;
+            margin: 15px;
+            padding: 20px;
+        }
+
+        .divInput:nth-child(n + 2) {
+            margin-top: 20px;
+        }
+
+        #previewImageFrontCover {
+            margin-top: 5px;
+            width: 200px;
+        }
+
+        #galleryPreview {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 5px;
+        }
+
+        #galleryPreview img {
+            align-items: center;
+            height: 200px;           
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Example for one image</h1>
+        <div class="container">
+            <form action="index.html" method="GET" runat="server" enctype="multipart/form-data">
+                <div class="divInput">
+                    <label for="image_one">Upload Image</label>
+                    <input type="file" name="image_one" accept="image/*" onchange="loadFile(event)">
+
+                </div>
+
+                <div class="divInput">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+                <img id="previewImageFrontCover" />
+            </form>
+        </div>
+
+        <h1>Example multiple images</h1>
+        <div class="container">
+            <form action="index.html" method="GET">
+                <div class="divInput">
+                    <label for="email" class="form-label">Upload Multiple Images</label>
+                    <input type="file" name="images[]" id="inputMultipleImagesPreview" class="form-control" multiple>
+                </div>
+
+                <div class="divInput">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+
+                <div id="galleryPreview"></div>
+
+            </form>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
