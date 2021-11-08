@@ -25,7 +25,7 @@ statusDisplay.innerHTML = currentPlayerTurn();
 //Functions
 function handleCellPlayed(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
-    clicked.innerHTML = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
 }
 
 function handlePlayerChange() {
