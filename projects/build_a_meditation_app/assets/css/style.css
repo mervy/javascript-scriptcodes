@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: url("/assets/img/bg.jpg");
+  background: url("../img/bg.jpg");
   background-size: cover;
 }
 
@@ -117,7 +117,7 @@ button:hover {
   color: var(--cor-roxa)
 }
 
-button-inactive {
+.button-inactive {
   pointer-events: none;
   background-color: #969696;
   color: #fff;
