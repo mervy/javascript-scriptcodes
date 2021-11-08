@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        https://www.w3schools.com/howto/howto_js_slideshow.asp
+    -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 1 / 4</div>
+            <img src="assets/img/download1.png" alt="" style="width: 100%;">
+            <div class="text">Caption Text One</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 2 / 4</div>
+            <img src="assets/img/download2.png" alt="" style="width: 100%;">
+            <div class="text">Caption Text Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 3 / 4</div>
+            <img src="assets/img/download3.jpg" alt="" style="width: 100%;">
+            <div class="text">Caption Text Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 4 / 4</div>
+            <img src="assets/img/download1.jpeg" alt="" style="width: 100%;">
+            <div class="text">Caption Text Four</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+
+    <br>
+
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>    
+</body>
+</html>
