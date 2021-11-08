@@ -40,7 +40,7 @@ function handleResultValidation() {
         let a = gameState[winCondition[0]];
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
-        if(a === '' || b ==== '' || c ==== '') {
+        if(a === '' || b === '' || c === '') {
             continue;
         }
         if (a === b && b === c) {
